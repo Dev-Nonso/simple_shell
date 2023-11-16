@@ -28,9 +28,7 @@ void prompt(char **av, char **env)
 
 		if (num_char == -1)
 		{
-			if (string != NULL)
-				free(string);
-			print_str("\n");
+			free(string);
 			break;
 		}
 		if (num_char == 1)
@@ -42,8 +40,6 @@ void prompt(char **av, char **env)
                                 string[i] = 0;
                         i++;
                 }
-
-		string[num_char - 1] = '\0';
 
 		execute_command(string, env);
 
