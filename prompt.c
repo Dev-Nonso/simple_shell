@@ -10,6 +10,7 @@
 void prompt(char **av, char **env)
 {
 	char *string = NULL;
+	int i;
 	size_t n = 0;
 	ssize_t num_char;
 
@@ -34,6 +35,13 @@ void prompt(char **av, char **env)
 		}
 		if (num_char == 1)
 			continue;
+		i = 0;
+                while (string[i])
+                {
+                        if (string[i] == '\n')
+                                string[i] = 0;
+                        i++;
+                }
 
 		string[num_char - 1] = '\0';
 
