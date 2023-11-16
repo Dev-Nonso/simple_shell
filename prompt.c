@@ -31,7 +31,7 @@ void prompt(char **av, char **env)
 			free(string);
 			break;
 		}
-		if (num_char == 1)
+		if (num_char == 1 && string[0] == '\0')
 			continue;
 		i = 0;
                 while (string[i])
