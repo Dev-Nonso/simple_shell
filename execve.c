@@ -19,13 +19,14 @@ void execute_command(char *command, char **env)
 	if (child_pid == -1)
 	{
 		free(command);
+		perror("fork");
 		exit(EXIT_FAILURE);
 	}
 
 	if (child_pid == 0)
 	{
 		if (execve(argv[0], argv, env) == -1)
-			printf("/hsh: No such file or directory exists\n");
+			print_str("/hsh: No such file or directory exists\n");
 	}
 	else
 		wait(&status);
