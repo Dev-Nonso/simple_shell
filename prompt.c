@@ -33,13 +33,14 @@ void prompt(char **av, char **env)
 		}
 		if (num_char == 1 && string[0] == '\0')
 			continue;
+
 		i = 0;
-                while (string[i])
-                {
-                        if (string[i] == '\n')
-                                string[i] = 0;
-                        i++;
-                }
+		while (string[i])
+		{
+			if (string[i] == '\n')
+				string[i] = 0;
+			i++;
+		}
 
 		execute_command(string, env);
 
