@@ -18,6 +18,8 @@ void execute_command(char *command, char **env);
 char *get_path(char *command);
 void builtin_cd(char *args);
 void builtin_exit(void);
+char **env_var();
+
 
 /* support fuctions like strcmp, strdup, strlen, strcpy and strcat*/
 int __strcmp(char *str_len1, char *str_len2);

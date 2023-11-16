@@ -5,7 +5,6 @@
  * @env: The array of environment variables.
  * Return: No return value.
  */
-
 void execute_command(char *command, char **env)
 {
 	char *argv[11], *cmdpath;
@@ -21,6 +20,14 @@ void execute_command(char *command, char **env)
 	if (__strcmp(argv[0], "cd") == 0)
 	{
 		builtin_cd(argv[0]);
+	}
+	else if (__strcmp(argv[0], "env") == 0)
+	{
+		for (; *env; env++)
+		{
+			env_var();
+			continue;
+		}
 	}
 	if (__strcmp(argv[0], "exit") == 0)
 	{
