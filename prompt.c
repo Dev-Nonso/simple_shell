@@ -31,8 +31,8 @@ void prompt(char **av, char **env)
 			free(string);
 			break;
 		}
-		if (num_char == 1)
-			continue;
+		if (num_char == 1 && string[0] == '\n')
+			continue; /* Skip empty line */
 
 		i = 0;
 		while (string[i])
