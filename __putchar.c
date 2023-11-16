@@ -26,3 +26,4 @@ int print_str(char *str)
 		count += __putchar(str[i++]);
 	return (count);
 }
+

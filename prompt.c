@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * prompt - Display a prompt and read user input.
  * @av: An array of strings containing program arguments.
@@ -19,10 +18,7 @@ void prompt(char **av, char **env)
 	while (1)
 	{
 		if (isatty(STDIN_FILENO))
-		{
 			print_str("($) ");
-			fflush(stdout);
-		}
 
 		num_char = getline(&string, &n, stdin);
 
@@ -31,8 +27,6 @@ void prompt(char **av, char **env)
 			free(string);
 			break;
 		}
-		if (num_char == 1 && string[0] == '\0')
-			continue;
 
 		i = 0;
 		while (string[i])
@@ -41,10 +35,6 @@ void prompt(char **av, char **env)
 				string[i] = 0;
 			i++;
 		}
-
 		execute_command(string, env);
-
-		free(string);
-		string = NULL;
 	}
 }
