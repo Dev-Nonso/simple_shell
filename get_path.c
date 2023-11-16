@@ -41,7 +41,6 @@ char *get_path(char *command)
 			return (__strdup(command_path));
 		}
 		dir = strtok(NULL, ":");
-		printf("wonderful");
 	}
 	free(path_copy);
 	return (NULL);

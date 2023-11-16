@@ -20,7 +20,7 @@ void execute_command(char *command, char **env)
 	argv[j] = NULL;
 	if (__strcmp(argv[0], "cd") == 0)
 	{
-		/*builtin_cd(argv[0]);*/
+		builtin_cd(argv[0]);
 	}
 	if (__strcmp(argv[0], "exit") == 0)
 	{
