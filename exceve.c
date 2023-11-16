@@ -24,7 +24,8 @@ void execute_command(char *command, char **env)
 	}
 	if (__strcmp(argv[0], "exit") == 0)
 	{
-		builtin_exit();
+		free(command);
+		exit(0);
 	}
 	else
 	{
