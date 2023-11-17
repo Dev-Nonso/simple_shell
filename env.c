@@ -18,3 +18,12 @@ char **env_var()
 
 	return (environ);
 }
+
+void execute_command(char *command, char **env)
+{
+	if (strcmp(command, "env") == 0)
+	{
+		print_environment(env);
+		return;
+	}
+}
