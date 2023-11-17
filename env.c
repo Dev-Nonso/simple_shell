@@ -6,7 +6,7 @@
  * Return: A pointer to the environment variables.
  */
 
-char **env_var(void)
+char **env_var()
 {
 	int k;
 	/*char **env = environ;*/
