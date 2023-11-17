@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * main - Entry point for the shell program.
  * @ac: The number of command-line arguments.
@@ -8,6 +7,7 @@
  *
  * Return: Always returns 0.
  */
+
 int main(int ac, char **av, char **env)
 {
 	if (ac == 1)
